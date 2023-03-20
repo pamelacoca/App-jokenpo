@@ -47,15 +47,15 @@ class _GameAppState extends State<GameApp> {
       (escolhaUsuario == "tesoura" && escolhaMaquina == "papel") ||
       (escolhaUsuario == "papel" && escolhaMaquina == "pedra")
     ) {
-      setState(() => _mensagemUsuario = 'Você ganhou!');
+      setState(() => _mensagemUsuario = 'Você ganhou, $escolhaUsuario ganha de $escolhaMaquina');
     } else if (
        (escolhaUsuario == "tesoura" && escolhaMaquina == "pedra") ||
       (escolhaUsuario == "papel" && escolhaMaquina == "tesoura") ||
       (escolhaUsuario == "pedra" && escolhaMaquina == "papel")
     ) {
-      setState(() => _mensagemUsuario = 'Você perdeu!');
+      setState(() => _mensagemUsuario = 'Você perdeu $escolhaMaquina ganha de $escolhaUsuario!');
     } else {
-      setState(() => _mensagemUsuario = 'Empatamos!');
+      setState(() => _mensagemUsuario = 'Empatamos, $escolhaMaquina e $escolhaUsuario são iguais!');
     }
   }
 
